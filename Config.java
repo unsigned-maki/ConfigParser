@@ -52,7 +52,7 @@ public class Config extends HashMap<String, String>
 
         for (Entry<String, String> entry : this.entrySet())
         {
-            serialized.append(String.format("%s=%s\n", entry.getKey(), entry.getValue()));
+            serialized.append(String.format("%s%s%s\n", this.getSeperator(), entry.getKey(), entry.getValue()));
         }
 
         return serialized.toString();
